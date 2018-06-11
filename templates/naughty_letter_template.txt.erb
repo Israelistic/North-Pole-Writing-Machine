@@ -1,0 +1,20 @@
+Dear <%= name.capitalize %>,
+
+You must be very excited that Christmas is coming. Are you looking forward to getting lots of fun toys?
+
+Are you? Seriously? C'mon kid.
+
+I've been watching you all year. And you've been a very naughty kid.
+
+I can forgive a lot but when you <%= infraction.join(" ") %>  it was the last straw. If it were up to me, you'd get nothing. In fact, I'd take back that Furby I got you last year. But Mrs. Claus insisted that I bring you something on your list.
+<% if toys.include?('Kaleidoscope') -%>
+Unfortunately, Merton messed up the Kaleidoscope order and the shipment won’t arrive until January..
+<% else %>
+So you're getting the <%= toys.sample -%> But I'm making sure it's from the defect pile.
+
+As for the  - <%= toys.join(", ") %> , Sorry Better luck next year.
+
+Remember – I'll be watching you.
+<% end -%>
+Regards,
+Santa "All-seeing" Claus
